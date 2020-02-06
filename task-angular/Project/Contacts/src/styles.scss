@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+form div.input-field input{
+ padding-left: 15px !important;
+ color: rgb(78, 78, 235)
+}
+
+input.ng-invalid.ng-dirty{
+  border-bottom-color:#e91e63 !important;
+  box-shadow: 0 1px 0 0 #e91e63 !important;
+}
+
+a.action-btn-hover{
+  cursor: pointer;
+}
+
+.btn-custom,.btn-customer:hover,.btn-customer:focus{
+    background-color: bisque;
+    margin:0px 5px;
+    border: rgb(143, 76, 76) solid 1px;
+    text-transform:none;
+    font-size:1.1rem;
+}
+#toast-container{
+  top:auto !important;
+  right:auto !important;
+  bottom:10%;
+  left:7%;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
