@@ -1,0 +1,92 @@
+
+
+<!-- <div class="container">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+
+    <mat-form-field floatLabel="never" class="form-element">
+      <input type="text" matInput placeholder="Username" formControlName="username">
+      <mat-error *ngIf="formGroup.controls['username'].invalid">
+        {{getError('user')}}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="never" class="form-element">
+      <input type="password" matInput placeholder="Password" formControlName="password">
+      <mat-error *ngIf="!formGroup.controls['password'].valid">
+        {{getError('pass')}}
+      </mat-error>
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!formGroup.valid">Submit Form</button>
+    </div>
+
+  </form>
+</div> -->
+
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content white-text">
+        <div class="row">
+          <div class="col s5">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+              <input type="hidden" name="_id">
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="name" id="name" placeholder="Enter name" [(ngModel)]="contactData.name">
+                  <label for="">Name :
+                    <label for="" class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="surname" placeholder="Enter surname" [(ngModel)]="contactData.surname">
+                  <label for="">Surname :
+                    <label for="" class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="number"  placeholder="Enter Phone number" [(ngModel)]="contactData.number">
+                  <label for="">Phone Number :
+                    <label for="" class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="birthday" placeholder="Enter birthday" [(ngModel)]="contactData.birthday">
+                  <label for="">birthday :
+                    <label for="" class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <input type="text" name="address" [disabled]="!contactForm.valid" placeholder="Enter address" [(ngModel)]="contactData.address">
+                  <label for="">address :
+                    <label for="" class="red-text">*</label>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn btn-primary right" type="submit">Save</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col s7">
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
